@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perth Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script> <!-- Link to your external JavaScript file -->
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="container">
+    <!-- Main Title -->
+    <h1>Perth Housing Price Prediction</h1>
+
+    <div class="form-grid">
+        <div class="card">
+            <!-- Suburb Selection -->
+            <h2>Suburb</h2>
+            <div>
+                <select class="suburb" id="uiSuburb">
+                    <option value="" disabled selected>Choose a Suburb</option>
+                    <!-- Options will be populated dynamically by JavaScript -->
+                    <option>alexander heights</option>
+                    <option>alfred cove</option>
+                </select>
+            </div>
+
+            <!-- Bedrooms Selection -->
+            <h2>Bedrooms</h2>
+            <input type="range" id="uiBedrooms" min="0" max="10" step="1" value="0" oninput="document.getElementById('bedroomsValue').textContent=this.value">
+            <span id="bedroomsValue">0</span>
+        </div>
+
+        <div class="card">
+            <!-- Bathrooms Selection -->
+            <h2>Bathrooms</h2>
+            <input type="range" id="uiBathrooms" min="0" max="5" step="1" value="0" oninput="document.getElementById('bathroomsValue').textContent=this.value">
+            <span id="bathroomsValue">0</span>
+
+            <!-- Garage Selection -->
+            <h2>Garage</h2>
+            <input type="range" id="uiGarage" min="0" max="10" step="1" value="0" oninput="document.getElementById('garageValue').textContent=this.value">
+            <span id="garageValue">0</span>
+        </div>
+
+        <div class="card">
+            <!-- Land Area Input -->
+            <h2>Land Area (in sq. ft.)</h2>
+            <input type="number" id="uiLandArea" placeholder="Enter land area">
+
+            <!-- Floor Area Input -->
+            <h2>Floor Area (in sq. ft.)</h2>
+            <input type="number" id="uiFloorArea" placeholder="Enter floor area">
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+    
+
+    <!-- Estimated Price Result -->
+    <div id="uiEstimatedPrice" class="result"><h2></h2></div>
+</div>
+</body>
+</html>

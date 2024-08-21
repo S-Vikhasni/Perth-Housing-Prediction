@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0e0b16;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+}
+
+.container {
+    background: #1f1b2e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 28px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.card {
+    background: #2b2638;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 18px;
+    color: #b3b3b3;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 600;
+}
+
+select,
+input[type="range"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #38304d;
+    color: #fff;
+}
+
+/* Hide number input spinners but keep input functionality */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    appearance: textfield; /* Ensure input functionality is not affected */
+}
+
+input[type="range"] {
+    appearance: none;
+    height: 6px;
+    background: #3b3b51;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #7c37fa;
+    cursor: pointer;
+}
+
+button.submit {
+    background-color: #7c37fa;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 25%;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button.submit:hover {
+    background-color: #5b25b5;
+}
+
+.result h2 {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #e0e0e0;
+    text-align: center;
+}
