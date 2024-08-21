@@ -1,10 +1,10 @@
 function onPageLoad() {
   console.log("document loaded");
-  var url = "http://127.0.0.1:5000/get_suburb_names"; // Ensure this is the correct endpoint
+  var url = "http://127.0.0.1:5000/get_suburb_names"; 
   $.get(url, function(data, status) {
       console.log("got response from get_suburb_names request");
       if (data) {
-          var suburbs = data.suburbs; // Make sure the key 'suburbs' matches the response structure
+          var suburbs = data.suburbs; 
           var uiSuburb = document.getElementById("uiSuburb");
           $('#uiSuburb').empty(); // Ensure the dropdown is reset
           for (var i in suburbs) {
@@ -42,9 +42,9 @@ function onClickedEstimatePrice() {
   var garage = getGarageValue();
   var landArea = parseFloat(document.getElementById("uiLandArea").value);
   var floorArea = parseFloat(document.getElementById("uiFloorArea").value);
-  var estPrice = document.getElementById("uiEstimatedPrice"); // Element to display estimated price
+  var estPrice = document.getElementById("uiEstimatedPrice"); 
 
-  var url = "http://127.0.0.1:5000/predict_home_price"; // Ensure this is the correct endpoint
+  var url = "http://127.0.0.1:5000/predict_home_price"; 
 
   // Make the POST request
   $.post(url, {
