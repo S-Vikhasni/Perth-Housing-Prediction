@@ -67,7 +67,6 @@ input[type="number"] {
     color: #fff;
 }
 
-/* Hide number input spinners but keep input functionality */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -75,7 +74,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type="number"] {
-    appearance: textfield; /* Ensure input functionality is not affected */
+    appearance: textfield;
 }
 
 input[type="range"] {
